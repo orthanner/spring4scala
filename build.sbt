@@ -19,10 +19,10 @@ lazy val hello = taskKey[Unit]("An example task")
 
 hello := { println("Hello!") }
 
-lazy val core = (project in file("spring4scala-core")).
+lazy val `spring4scala-core` = (project in file("spring4scala-core")).
   settings(commonSettings: _*)
 
-lazy val jca = (project in file("spring4scala-jca")).
+lazy val `spring4scala-jca` = (project in file("spring4scala-jca")).
   settings(commonSettings: _*).
   settings(
     libraryDependencies ++= Seq(
@@ -32,13 +32,13 @@ lazy val jca = (project in file("spring4scala-jca")).
   )
 
 
-lazy val jdbc = (project in file("spring4scala-jdbc")).
+lazy val `spring4scala-jdbc` = (project in file("spring4scala-jdbc")).
   settings(commonSettings: _*).
   settings(
     libraryDependencies += "org.springframework" % "spring-jdbc" % springVersion
   )
 
-lazy val jms = (project in file("spring4scala-jms")).
+lazy val `spring4scala-jms` = (project in file("spring4scala-jms")).
   settings(commonSettings: _*).
   settings(
     libraryDependencies ++= Seq(
@@ -47,7 +47,7 @@ lazy val jms = (project in file("spring4scala-jms")).
     )
   )
 
-lazy val transaction = (project in file("spring4scala-tx")).
+lazy val `spring4scala-tx` = (project in file("spring4scala-tx")).
   settings(commonSettings: _*).
   settings(
     libraryDependencies += "org.springframework" % "spring-tx" % springVersion
