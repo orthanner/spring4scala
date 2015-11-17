@@ -14,11 +14,6 @@ lazy val commonSettings = Seq(
   scalacOptions ++= Seq("-deprecation", "-feature", "-language:implicitConversions")
 )
 
-
-lazy val hello = taskKey[Unit]("An example task")
-
-hello := { println("Hello!") }
-
 lazy val `spring4scala-core` = (project in file("spring4scala-core")).
   settings(commonSettings: _*)
 
