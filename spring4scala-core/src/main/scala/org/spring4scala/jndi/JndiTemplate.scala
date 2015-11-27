@@ -5,7 +5,7 @@ import java.util.Properties
 import org.springframework.jndi.{ JndiTemplate => JavaTemplate }
 
 class JndiTemplate extends JavaTemplate {
-  override def bind(name: String, `object`: AnyRef): Unit = super.bind(name, `object`.asInstanceOf[Object])
+  override def bind(name: String, `object`: Any): Unit = super.bind(name, `object`.asInstanceOf[Object])
 
   def apply[T](callback: JndiCallbackFunction[T]): T = execute(new JndiCallbackAdapter[T](callback))
 }
