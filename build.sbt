@@ -11,7 +11,7 @@ lazy val commonSettings = Seq(
   	"commons-codec" % "commons-codec" % "1.9",
   	"org.springframework" % "spring-context" % springVersion
   ),
-  scalacOptions ++= Seq("-deprecation", "-feature", "-language:implicitConversions")
+  scalacOptions ++= Seq("-deprecation", "-feature", "-language:implicitConversions", "-language:postfixOps")
 )
 
 lazy val `spring4scala-core` = (project in file("spring4scala-core")).
